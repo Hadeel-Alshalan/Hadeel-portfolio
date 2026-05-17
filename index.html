@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Hadeel Al-Shalan | AI & ML Engineer</title>
+  <meta name="description"
+    content="Portfolio of Hadeel Al-Shalan, AI Engineer and Machine Learning Engineer specializing in Generative AI, Multi-Agent Systems, and Data Science." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- Custom Cursor & Trails -->
+  <div id="cursor" class="custom-cursor"></div>
+  <div id="spotlight" class="spotlight-effect"></div>
+
+  <!-- Ambient Nebula Background -->
+  <div class="ambient-blob blob-1"></div>
+  <div class="ambient-blob blob-2"></div>
+  <div class="ambient-blob blob-3"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo magnetic-link">HA</div>
+    <div class="nav-links">
+      <a href="#home" class="magnetic-link" data-i18n="nav_home">Home</a>
+      <a href="#about" class="magnetic-link" data-i18n="nav_about">About</a>
+      <a href="#skills" class="magnetic-link" data-i18n="nav_skills">Skills</a>
+      <a href="#experience" class="magnetic-link" data-i18n="nav_experience">Experience</a>
+      <a href="#contact" class="magnetic-link" data-i18n="nav_contact">Contact</a>
+      <a href="#" id="lang-toggle" class="magnetic-link" style="color: var(--accent-cyan);">العربية</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-split left-side">
+      <!-- 3D Abstract Background now localized to Hero -->
+      <div id="canvas-container"></div>
+    </div>
+    <div class="hero-split right-side">
+      <div class="hero-content">
+        <h1 class="main-title animate-up" data-i18n="hero_name">Hadeel<br>Al-Shalan</h1>
+        <h2 class="role animate-up-delay-1" data-i18n="hero_role">Computer Science Graduate | Agentic AI & Gen AI |
+          Machine Learning | Data
+          Science | LLMs | Python</h2>
+        <p class="slogan animate-up-delay-2" data-i18n="hero_slogan">
+          Crafting the future by turning complex data into intelligent solutions and teaching machines to think, learn,
+          and innovate.
+        </p>
+        <div class="animate-up-delay-3">
+          <a href="/Hadeel-Al-Shalan-CV.pdf.pdf" download class="btn-dramatic magnetic-link">
+            <span data-i18n="hero_cv">Download CV</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container about-container">
+      <div class="about-content">
+        <h2 class="section-title" data-i18n="about_title">Who Am I</h2>
+        <p class="about-text" data-i18n="about_text">
+          Computer Science graduate with a strong academic foundation and practical experience in programming and data
+          science.<br><br>
+          Gained hands-on experience through a graduation project and multiple specialized courses in Artificial
+          Intelligence and Python.<br><br>
+          Skilled in Generative AI, applying AI models to create innovative solutions, and proficient with AI libraries
+          such as NumPy, Pandas, scikit-learn, and TensorFlow.<br><br>
+          Experienced in Microsoft Office tools for reporting, presentations, and digital research, as well as problem
+          analysis and solution design.<br><br>
+          Seeking to apply academic knowledge and technical expertise to contribute to advanced digital solutions while
+          continuing professional growth in the field of Artificial Intelligence.
+        </p>
+      </div>
+      <div class="about-image-wrapper glass-card neon-border magnetic-card">
+        <img src="/ai_image.png" alt="Futuristic AI Core" class="about-image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Bento Grid Section (Skills) -->
+  <section id="skills" class="expertise-section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="skills_title">The Technical Core</h2>
+      <div class="bento-grid">
+        <!-- Card 1 -->
+        <div class="bento-card glass-card neon-border magnetic-card">
+          <div class="icon-glow icon-cyan bento-icon">
+            <i data-lucide="brain-circuit"></i>
+          </div>
+          <h3 data-i18n="skill_1_title">Generative AI</h3>
+          <p data-i18n="skill_1_desc">Large Language Models (LLMs), Prompt Engineering, Multi-Agent Systems (LangChain &
+            CrewAI), Vector
+            Databases & RAG.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bento-card glass-card neon-border magnetic-card">
+          <div class="icon-glow icon-violet bento-icon">
+            <i data-lucide="network"></i>
+          </div>
+          <h3 data-i18n="skill_2_title">Machine Learning & AI</h3>
+          <p data-i18n="skill_2_desc">Supervised Learning, Unsupervised Learning, Reinforcement Learning, Deep Learning,
+            Neural Networks,
+            PyTorch, TensorFlow, Model Evaluation, SQL, NLP.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bento-card glass-card neon-border magnetic-card">
+          <div class="icon-glow icon-pink bento-icon">
+            <i data-lucide="database"></i>
+          </div>
+          <h3 data-i18n="skill_3_title">Data Science</h3>
+          <p data-i18n="skill_3_desc">Data Processing & Analysis using NumPy and Pandas.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="bento-card glass-card neon-border magnetic-card">
+          <div class="icon-glow icon-cyan bento-icon">
+            <i data-lucide="layout-template"></i>
+          </div>
+          <h3 data-i18n="skill_4_title">Web Dev</h3>
+          <p data-i18n="skill_4_desc">Interactive AI Apps (Gradio & Streamlit) and Full-stack principles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Timeline Section (Experience & Education) -->
+  <section id="experience" class="journey-section">
+    <div class="container">
+      <h2 class="section-title text-center" data-i18n="journey_title">The Journey</h2>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <!-- Education (Right) -->
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card neon-border magnetic-card">
+            <h3 data-i18n="edu_title">Bachelor of Computer Science</h3>
+            <h4 data-i18n="edu_sub">Northern Border University (2020 &ndash; 2025)</h4>
+            <p data-i18n="edu_p1">Second Honors | GPA: 4.70/5</p>
+            <p data-i18n="edu_p2">Gained a comprehensive foundation in computer science, algorithms, and software
+              development, setting the
+              stage for advanced AI studies.</p>
+          </div>
+        </div>
+
+        <!-- Experience (Left) -->
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card neon-border magnetic-card">
+            <h3 data-i18n="exp_title">Generative AI Program</h3>
+            <h4 data-i18n="exp_sub">Saudi Digital Academy (Oct 2025)</h4>
+            <ul
+              style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; padding-left: 1.2rem;">
+              <li data-i18n="exp_l1"><strong>Prompt Engineering & LLMs:</strong> Mastering prompt design.</li>
+              <li data-i18n="exp_l2"><strong>Multi-Agent Systems:</strong> LangChain & CrewAI workflows.</li>
+              <li data-i18n="exp_l3"><strong>Interactive Apps:</strong> Gradio & Streamlit development.</li>
+              <li data-i18n="exp_l4"><strong>Advanced AI:</strong> RAG, Vector DBs, and Ethical AI.</li>
+            </ul>
+            <a href="/SDA-Generative-AI-Certificate.png.jpg" target="_blank" rel="noopener noreferrer"
+              class="btn-secondary magnetic-link" data-i18n="exp_btn">View Certificate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title text-center" data-i18n="contact_title">Let's Connect</h2>
+
+      <!-- Available for Work Banner -->
+      <div class="sidebar-block glass-card neon-border status-block magnetic-card sidebar-animate"
+        style="max-width: 300px; margin: 0 auto 4rem auto;">
+        <div class="status-dot"></div>
+        <h3 data-i18n="contact_available">Available for Work</h3>
+      </div>
+
+      <div class="contact-layout"
+        style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: start;">
+
+        <!-- Left Side: Send Me a Message Form -->
+        <div class="dashboard-left glass-card neon-border contact-animate" style="padding: 2.5rem;">
+          <h2 class="card-title" style="font-size: 2.2rem; margin-bottom: 0.5rem;" data-i18n="form_title">Send Me a
+            Message</h2>
+          <p class="card-subtitle" style="margin-bottom: 2.5rem; color: var(--text-muted);" data-i18n="form_subtitle">
+            Feel free to reach out for collaborations or just a friendly hello.</p>
+
+          <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Configuration -->
+            <input type="hidden" name="access_key" value="cca8731d-540b-40cf-b3c5-37adbbbf4aa5">
+            <input type="hidden" name="subject" value="New message from Portfolio">
+            <input type="hidden" name="from_name" value="Hadeel Portfolio">
+            <!-- Redirect back to the portfolio after sending -->
+            <input type="hidden" name="redirect" value="http://localhost:5173/">
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+              <div class="form-group">
+                <label for="name" data-i18n="form_name">Name</label>
+                <input type="text" id="name" name="name" placeholder="hadeel mohammed" data-i18n="form_name_ph"
+                  required />
+              </div>
+              <div class="form-group">
+                <label for="email" data-i18n="form_email">Email</label>
+                <input type="email" id="email" name="email" placeholder="hadeel@example.com" data-i18n="form_email_ph"
+                  required />
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 1.5rem;">
+              <label for="message" data-i18n="form_message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message here..."
+                data-i18n="form_message_ph" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-dramatic magnetic-link" style="width: 100%; margin-top: 2rem;">
+              <span data-i18n="form_submit">Send Message</span>
+            </button>
+            <div id="form-status"
+              style="display:none; margin-top:1rem; padding:1rem; border-radius:8px; text-align:center;"></div>
+          </form>
+        </div>
+
+        <!-- Right Side: Contact Info -->
+        <div class="contact-info-grid sidebar-animate" style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+          <!-- Email Block -->
+          <a href="mailto:hhaaddeell2030@gmail.com" class="sidebar-block glass-card neon-border magnetic-card"
+            style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:1.5rem; padding: 1.5rem;">
+            <div class="icon-glow icon-cyan">
+              <i data-lucide="mail"></i>
+            </div>
+            <div class="block-info">
+              <h3 style="margin-bottom:0.2rem; font-size:0.9rem; color:var(--text-muted);"
+                data-i18n="contact_email_title">Email</h3>
+              <p style="font-size: 1.1rem; font-weight:500;">hhaaddeell2030@gmail.com</p>
+            </div>
+          </a>
+
+          <!-- Phone Block -->
+          <a href="tel:+966596788902" class="sidebar-block glass-card neon-border magnetic-card"
+            style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:1.5rem; padding: 1.5rem;">
+            <div class="icon-glow icon-violet">
+              <i data-lucide="phone"></i>
+            </div>
+            <div class="block-info">
+              <h3 style="margin-bottom:0.2rem; font-size:0.9rem; color:var(--text-muted);"
+                data-i18n="contact_phone_title">Phone</h3>
+              <p style="font-size: 1.1rem; font-weight:500;">+966 59 678 8902</p>
+            </div>
+          </a>
+
+          <!-- Location Block -->
+          <div class="sidebar-block glass-card neon-border magnetic-card"
+            style="display:flex; align-items:center; gap:1.5rem; padding: 1.5rem;">
+            <div class="icon-glow icon-pink">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <div class="block-info">
+              <h3 style="margin-bottom:0.2rem; font-size:0.9rem; color:var(--text-muted);"
+                data-i18n="contact_location_title">Location</h3>
+              <p style="font-size: 1.1rem; font-weight:500;" data-i18n="contact_location_val">Arar, Saudi Arabia</p>
+            </div>
+          </div>
+
+          <!-- Follow Me Block (LinkedIn) -->
+          <a href="https://www.linkedin.com/in/hadeel-al-shalan-98902a381/" target="_blank" rel="noopener noreferrer"
+            class="sidebar-block glass-card neon-border magnetic-card"
+            style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:1.5rem; padding: 1.5rem;">
+            <div class="icon-glow" style="background: rgba(10, 102, 194, 0.1);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="#0A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="filter: drop-shadow(0 0 8px #0A66C2);">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </div>
+            <div class="block-info">
+              <h3 style="margin-bottom:0.2rem; font-size:0.9rem; color:var(--text-muted);"
+                data-i18n="contact_follow_title">LinkedIn</h3>
+              <p style="font-size: 1.1rem; font-weight:500;">Hadeel Al-Shalan</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="copyright" data-i18n="footer_text">&copy; 2026 Hadeel Al-Shalan. Built with Passion & AI.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="./main.js"></script>
+  <script type="module" src="./scene.js"></script>
+</body>
+
+</html>
