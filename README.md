@@ -1,145 +1,93 @@
-# @rolldown/pluginutils [![npm](https://img.shields.io/npm/v/@rolldown/pluginutils.svg)](https://npmx.dev/package/@rolldown/pluginutils)
+# GSAP (GreenSock Animation Platform)
 
-Plugin utilities for [Rolldown](https://rolldown.rs).
+[![GSAP - Animate anything](https://gsap.com/GSAP-share-image.png)](https://gsap.com)
 
-Includes regex helpers for plugin hook filters, composable filter expressions, and a helper for filtering out Vite-serve-only plugins.
+GSAP is a **framework-agnostic** JavaScript animation library that turns developers into animation superheroes. Build high-performance animations that work in **every** major browser. Animate CSS, SVG, canvas, React, Vue, WebGL, colors, strings, motion paths, generic objects... anything JavaScript can touch! GSAP's <a href="https://gsap.com/docs/v3/Plugins/ScrollTrigger/">ScrollTrigger</a> plugin delivers jaw-dropping scroll-based animations with minimal code. <a href="https://gsap.com/docs/v3/GSAP/gsap.matchMedia()">gsap.matchMedia()</a> makes building responsive, accessibility-friendly animations a breeze.
 
-## Install
+No other library delivers such advanced sequencing, reliability, and tight control while solving real-world problems on over 12 million sites. GSAP works around countless browser inconsistencies; your animations ***just work***. At its core, GSAP is a high-speed property manipulator, updating values over time with extreme accuracy. It's up to 20x faster than jQuery!
 
-```bash
-pnpm add -D @rolldown/pluginutils
+GSAP is completely flexible; sprinkle it wherever you want. **Zero dependencies.**
+
+There are many optional <a href="https://gsap.com/docs/v3/Plugins">plugins</a> and <a href="https://gsap.com/docs/v3/Eases">easing</a> functions for achieving advanced effects easily like <a href="https://gsap.com/docs/v3/Plugins/ScrollTrigger/">scrolling</a>, <a href="https://gsap.com/docs/v3/Plugins/MorphSVGPlugin">morphing</a>, [text splitting](https://gsap.com/docs/v3/Plugins/SplitText), animating along a <a href="https://gsap.com/docs/v3/Plugins/MotionPathPlugin">motion path</a> or <a href="https://gsap.com/docs/v3/Plugins/Flip/">FLIP</a> animations. There's even a handy <a href="https://gsap.com/docs/v3/Plugins/Observer/">Observer</a> for normalizing event detection across browsers/devices. 
+
+
+### Get Started
+
+[![Get Started with GSAP](https://gsap.com/_img/github/get-started.jpg)](https://gsap.com/get-started)
+
+
+## Docs &amp; Installation
+
+View the <a href="https://gsap.com/docs">full documentation here</a>, including an <a href="https://gsap.com/install">installation guide</a>.
+
+### CDN
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
 ```
 
-## Usage
+See <a href="https://www.jsdelivr.com/gsap">JSDelivr's dedicated GSAP page</a> for quick CDN links to the core files/plugins. There are more <a href="https://gsap.com/install">installation instructions</a> at gsap.com.
 
-```ts
-import { exactRegex, prefixRegex, makeIdFiltersToMatchWithQuery } from '@rolldown/pluginutils'
+**Every major ad network excludes GSAP from file size calculations** and most have it on their own CDNs, so contact them for the appropriate URL(s). 
+
+### NPM
+See the <a href="https://gsap.com/install">guide to using GSAP via NPM here</a>.
+
+```javascript
+npm install gsap
 ```
 
-All filter helpers are also exposed via the `/filter` subpath:
+GSAP's core can animate almost anything including CSS and attributes, plus it includes all of the <a href="https://gsap.com/docs/v3/GSAP/UtilityMethods">utility methods</a> like <a href="https://gsap.com/docs/v3/GSAP/UtilityMethods/interpolate()">interpolate()</a>, <a href="https://gsap.com/docs/v3/GSAP/UtilityMethods/mapRange()">mapRange()</a>, most of the <a href="https://gsap.com/docs/v3/Eases">eases</a>, and it can do snapping and modifiers. 
 
-```ts
-import { and, or, id, include } from '@rolldown/pluginutils/filter'
+```javascript
+// typical import
+import gsap from "gsap";
+
+// get other plugins:
+import ScrollTrigger from "gsap/ScrollTrigger";
+import Flip from "gsap/Flip";
+import Draggable from "gsap/Draggable";
+
+// or all tools are exported from the "all" file (excluding members-only plugins):
+import { gsap, ScrollTrigger, Draggable, MotionPathPlugin } from "gsap/all";
+
+// don't forget to register plugins
+gsap.registerPlugin(ScrollTrigger, Draggable, Flip, MotionPathPlugin); 
 ```
 
-## Regex helpers
+The NPM files are ES modules, but there's also a /dist/ directory with <a href="https://www.davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/">UMD</a> files for extra compatibility.
 
-### `exactRegex`
+## GSAP is FREE! 
 
-- **Type:** `(str: string, flags?: string) => RegExp`
+Thanks to [Webflow](https://webflow.com), GSAP is now **100% FREE** including ALL of the bonus plugins like [SplitText](https://gsap.com/docs/v3/Plugins/SplitText), [MorphSVG](https://gsap.com/docs/v3/Plugins/MorphSVGPlugin), and all the others that were exclusively available to Club GSAP members. That's right - the entire GSAP toolset is FREE, even for commercial use! 🤯  Read more [here](https://webflow.com/blog/gsap-becomes-free)
 
-Constructs a `RegExp` that matches the exact string specified. Useful as a plugin hook filter.
+### ScrollTrigger &amp; ScrollSmoother
 
-```ts
-import { exactRegex } from '@rolldown/pluginutils'
+If you're looking for scroll-driven animations, GSAP's <a href="https://gsap.com/docs/v3/Plugins/ScrollTrigger/">ScrollTrigger</a> plugin is the standard. There's a companion <a href="https://gsap.com/docs/v3/Plugins/ScrollSmoother/">ScrollSmoother</a> as well.
 
-const plugin = {
-  name: 'plugin',
-  resolveId: {
-    filter: { id: exactRegex('foo') },
-    handler(id) {}, // only called for `foo`
-  },
-}
-```
+[![ScrollTrigger](https://gsap.com/_img/github/scrolltrigger.jpg)](https://gsap.com/docs/v3/Plugins/ScrollTrigger)
 
-### `prefixRegex`
+### Using React? 
 
-- **Type:** `(str: string, flags?: string) => RegExp`
+There's a <a href="https://www.npmjs.com/package/@gsap/react">@gsap/react</a> package that exposes a `useGSAP()` hook which is a drop-in replacement for `useEffect()`/`useLayoutEffect()`, automating cleanup tasks. Please read the <a href="https://gsap.com/react">React guide</a> for details.
 
-Constructs a `RegExp` that matches values starting with the specified prefix.
+### Resources
 
-```ts
-import { prefixRegex } from '@rolldown/pluginutils'
+* <a href="https://gsap.com/">gsap.com</a>
+* <a href="https://gsap.com/get-started/">Getting started guide</a>
+* <a href="https://gsap.com/docs/">Docs</a>
+* <a href="https://gsap.com/demos">Demos &amp; starter templates</a>
+* <a href="https://gsap.com/community/">Community forums</a>
+* <a href="https://gsap.com/docs/v3/Eases">Ease Visualizer</a>
+* <a href="https://gsap.com/showcase">Showcase</a>
+* <a href="https://www.youtube.com/@GreenSockLearning">YouTube Channel</a>
+* <a href="https://gsap.com/cheatsheet">Cheat sheet</a>
+* <a href="https://webflow.com">Webflow</a>
 
-const plugin = {
-  name: 'plugin',
-  resolveId: {
-    filter: { id: prefixRegex('foo') },
-    handler(id) {}, // called for IDs starting with `foo`
-  },
-}
-```
+### Need help?
+Ask in the friendly <a href="https://gsap.com/community/">GSAP forums</a>. Or share your knowledge and help someone else - it's a great way to sharpen your skills! Report any bugs there too (or <a href="https://github.com/greensock/GSAP/issues">file an issue here</a> if you prefer).
 
-### `makeIdFiltersToMatchWithQuery`
+### License
+GreenSock's standard "no charge" license can be viewed at <a href="https://gsap.com/standard-license">https://gsap.com/standard-license</a>.
 
-- **Type:** `(input: string | RegExp | (string | RegExp)[]) => string | RegExp | (string | RegExp)[]`
-
-Converts an id filter so that it also matches ids that include a query string.
-
-```ts
-import { makeIdFiltersToMatchWithQuery } from '@rolldown/pluginutils'
-
-const plugin = {
-  name: 'plugin',
-  transform: {
-    filter: { id: makeIdFiltersToMatchWithQuery(['**/*.js', /\.ts$/]) },
-    // Matches:
-    //   foo.js, foo.js?foo, foo.txt?foo.js,
-    //   foo.ts, foo.ts?foo, foo.txt?foo.ts
-    handler(code, id) {},
-  },
-}
-```
-
-## Composable filters
-
-[Composable filter expressions](https://rolldown.rs/apis/plugin-api/hook-filters#composable-filters) for use cases where a simple `id`/`include`/`exclude` is not enough. For example, when a plugin needs to combine `id`, `moduleType`, `code`, and `query` conditions.
-
-```ts
-import { and, code, id, include, interpreter, moduleType, or } from '@rolldown/pluginutils'
-
-const expr = include(and(or(id(/\.tsx?$/), id(/\.jsx?$/)), moduleType('tsx'), code(/import React/)))
-
-interpreter(expr, sourceCode, sourceId, 'tsx') // boolean
-```
-
-### Builders
-
-| Builder                        | Description                                                                                                                                              |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `and(...exprs)`                | All operands must match.                                                                                                                                 |
-| `or(...exprs)`                 | At least one operand must match.                                                                                                                         |
-| `not(expr)`                    | Negates the operand.                                                                                                                                     |
-| `id(pattern, params?)`         | Match the module id. `pattern` is `string` or `RegExp`. `params.cleanUrl` strips the query/hash before matching.                                         |
-| `importerId(pattern, params?)` | Match the importer's id. Same shape as `id`.                                                                                                             |
-| `moduleType(type)`             | Match Rolldown's module type (`'js'`, `'jsx'`, `'ts'`, `'tsx'`, `'json'`, `'text'`, `'base64'`, `'dataurl'`, `'binary'`, `'empty'`, or a custom string). |
-| `code(pattern)`                | Match the module source. `string` matches with `includes`; `RegExp` with `test`.                                                                         |
-| `query(key, pattern)`          | Match a single query parameter. `pattern` is `boolean` (key presence/truthiness), `string` (exact value), or `RegExp` (value pattern).                   |
-| `queries(obj)`                 | Shorthand for `and(...)` over multiple `query` entries.                                                                                                  |
-| `include(expr)`                | Top-level wrapper marking `expr` as an inclusion rule.                                                                                                   |
-| `exclude(expr)`                | Top-level wrapper marking `expr` as an exclusion rule.                                                                                                   |
-
-### `interpreter`
-
-- **Type:** `(exprs, code?, id?, moduleType?, importerId?) => boolean`
-
-Evaluates one or more top-level expressions against the given inputs. Returns `true` when at least one `include` matches and no `exclude` matches; when no `include` is present, defaults to `true` unless an `exclude` matches.
-
-The argument required by each expression must be provided. For example, evaluating an `id(...)` expression without passing `id` will throw.
-
-## `filterVitePlugins`
-
-- **Type:** `<T>(plugins: T | T[] | null | undefined | false) => T[]`
-
-Removes Vite plugins that target the dev server (`apply: 'serve'`) from a (possibly nested) plugin array. Plugins whose `apply` is a function are invoked with a `command: 'build'` context to decide. Useful when reusing a Vite plugin array inside a Rolldown config.
-
-```ts
-import { defineConfig } from 'rolldown'
-import { filterVitePlugins } from '@rolldown/pluginutils'
-import viteReact from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: filterVitePlugins([
-    viteReact(),
-    {
-      name: 'dev-only',
-      apply: 'serve', // filtered out
-      // ...
-    },
-  ]),
-})
-```
-
-## License
-
-MIT
+Copyright (c) 2008-2026, GreenSock. All rights reserved.
